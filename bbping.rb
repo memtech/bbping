@@ -1,5 +1,6 @@
 require 'cinch'
-require './lib/define'
+
+Dir["./lib/plugin/*.rb"].each {|file| require file }
 
 bot = Cinch::Bot.new do
   configure do |config|
